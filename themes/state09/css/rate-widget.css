@@ -1,0 +1,47 @@
+  .rate-widget {
+    position: relative;
+    margin-bottom: 6px;
+    clear: both; /* Prevents from covering photo from being clicked. */
+  }
+
+  a.rate-button { /* user hasn't voted. */
+    background: #1F75CC url(../images/d7convert/thumbUp-unvoted.png) no-repeat;
+    height: 18px;
+    padding: 3px 6px 3px 27px;
+    border: 1px #195FA6 solid;
+    border-radius: 3px;
+    color: white;
+    box-shadow: 2px 3px 5px rgba(128, 128, 128, 0.5);
+    display: inline-block;
+    text-indent: inherit;
+  }
+
+  a.rate-button:hover {
+    background: #1F75CC url(../images/d7convert/thumbUp-glow.png) no-repeat;
+  }
+    
+  a.rate-button:active {
+    background: #1F75CC url(../images/d7convert/thumbUp.png) no-repeat;
+  }
+
+  .rate-marker { /* user voted. */
+    background: transparent url(../images/d7convert/thumbUp.png) no-repeat;
+    border: none;
+    color: inherit;
+    box-shadow: none;
+  }
+
+  .rate-widget .rate-button,
+  .rate-widget .rate-info {
+    display: inline-block;
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    height: 18px;
+  }
+  
+  .rate-info, .rate-description {
+    clear: left;
+    font-size: 0.9em;
+    color: inherit;
+    padding: 3px;
+  }

@@ -1,0 +1,375 @@
+/*****************************************************
+ * srembed.css
+ * Abridged from style.css
+ * Copyright (c) 2011 U.S. Department of State
+ * 2011-08-19
+ *
+ */
+
+@import url("reset.css");
+
+/* clear fixes - old - remarked out - used clear:left statements on most of this stuff - i.e. clearfix isn't needed for most of this?
+#content:after, #top-stories:after, #in-other-news:after, #features:after, #browse-by:after, #sitemap-links:after, #footer-links:after {content:".";display:block;height:0;clear:both;visibility:hidden;zoom:1;}
+
+#content, #top-stories, #in-other-news, #features, #browse-by, #sitemap-links, #footer-links {display:inline-block;}  for ie/mac
+*/
+
+/* necessary clear fixes */
+#browse-by:after, #content-well:after, #popup-content01:after, #popup-content02:after {content:".";display:block;height:0;clear:both;visibility:hidden;/*zoom:1;*/}
+
+html {
+	width:100%;
+}
+
+body {
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:100%;
+	font-family:Lucida Grande, Arial, Verdana, sans-serif;
+	line-height: 1.5em;
+	/*background:#fff url("../images/2010/bkg-flag05.jpg") top center no-repeat;*/
+}
+
+
+#ie6msg { background-color:#CCCCCC; border:2px solid gold; color:#000000; display:none; float:left; font-family:arial; font-size:12px; height:110px; left:350px; line-height:16px; padding:10px; position:absolute; top:220px; width:490px; z-index:10; }
+
+.region-feature {
+	background: url(../images/d7convert/gold_blend.png) repeat-x;
+	min-height: 350px;
+	margin: 0;
+	padding: 16px 21px;
+	overflow: hidden;
+}
+
+.region-feature .block {
+	float: left;
+	margin-bottom: 0;
+}
+
+#block-block-1 { /* Temporary Diplomat's Choice Tile */
+	background: url(../images/d7convert/block_divider.png) top right no-repeat;
+	margin-right: 12px;
+	padding-right: 12px;
+}
+
+#block-search-form {
+	height: 35px;
+	margin: 0px;
+	padding-top: 5px;
+}
+
+/* Search Result Views & Layouts ----------------------------------------- */
+	/* PRIMARY Search Result, customized in node template ---------------- */
+	/* Search Nodes & Teaser Nodes */
+	.search-results .node-image-record, 
+	.view-display-id-page .views-row, 
+	.page-taxonomy-term .block-system .node-image-record {
+		float: left;
+		margin-right: 9px;
+		width: 138px;
+		height: 18em;
+		text-align: center;
+		overflow: visible;
+	}
+	
+	/* General container of all elements before image */
+	.search-results .node-header, 
+	.view-display-id-page .node-header, 
+	.page-taxonomy-term .block-system .node-header {
+		margin: 0px;
+		overflow: hidden;
+		height: 6.6em;
+		width: 120px;
+		padding: 0px 9px;
+	}
+
+	/* Search Node Titles */
+	.search-results .node-image-record h2.node-title, 
+	.view-display-id-page .node-image-record h2.node-title, 
+	.page-taxonomy-term .block-system .node-image-record h2.node-title {
+		font-size: 0.9em;
+		font-weight: bold;
+		line-height: 1.3em;
+		margin-bottom: 0.25em;
+	}
+	
+	/* Search node title's inner link */
+	.search-results .node-image-record h2.node-title a, 
+	.view-display-id-page .node-image-record h2.node-title a, 
+	.page-taxonomy-term .block-system .node-image-record h2.node-title a {
+	}
+	
+	/* Search node text lines (location, date, etc.) */
+	.search-results .node-image-record .field .field-items .field-item, 
+	.view-display-id-page .node-image-record .field .field-items .field-item, 
+	.page-taxonomy-term .block-system .node-image-record .field .field-items .field-item {
+		font-size: 0.8em;
+		line-height: 1.2em;
+		padding: 0px;
+	}
+	
+	/* Search Node Image, outermost div's */
+	.search-results .node-image-wrapper, 
+	.view-display-id-page .node-image-wrapper, 
+	.page-taxonomy-term .block-system .node-image-wrapper {
+		margin-bottom: 0px;
+		position: relative;
+		height: 120px;
+	}
+	.search-results .node-image, 
+	.view-display-id-page .node-image, 
+	.page-taxonomy-term .block-system .node-image {
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+	}
+	
+	/* Search Node Image Container */
+	.search-results .node-image-record .field-name-field-image .field-items .field-item, 
+	.view-display-id-page .node-image-record .field-name-field-image .field-items .field-item, 
+	.page-taxonomy-term .block-system .node-image-record .field-name-field-image .field-items .field-item {
+		margin: 0;
+		padding: 0;
+		/*
+		height: 120px;
+		position: relative;
+		*/
+		bottom: 0px;
+		/*height: 120px;*/
+		width: 132px;
+		position: absolute;
+	}
+	
+	/* Search Node Image's surrounding link */
+	.search-results .node-image-record .field-name-field-image .field-items .field-item a, 
+	.view-display-id-page .node-image-record .field-name-field-image .field-items .field-item a, 
+	.page-taxonomy-term .block-system .node-image-record .field-name-field-image .field-items .field-item a {
+	}
+	
+	/* Prepare to Transition img */
+	.search-results .field-type-image img, 
+	.view-display-id-page .field-type-image img, 
+	.page-taxonomy-term .block-system .field-type-image img {
+		max-width: 120px;
+		max-height: 120px;
+		position: relative;
+		left: 0px;
+		transition:transform 0.2s ease-in;
+		-webkit-transition:-webkit-transform 0.2s ease-in; 
+		-moz-transition:-moz-transform 0.2s ease-in; 
+		-o-transition:-o-transform 0.2s ease-in; 
+		
+		/* Framing */
+		background: #fff url(../images/d7convert/bkg-gold-white-blend.png) repeat-x;
+		border-radius: 3px;
+		border: 1px #D9D6BF solid;
+		padding: 6px;
+	}
+	
+	/* Transition img */
+	.search-results .field-type-image img:hover, 
+	.view-display-id-page .field-type-image img:hover, 
+	.page-taxonomy-term .block-system .field-type-image img:hover {
+		box-shadow: 3px 4px 7px rgba(128,128,128,0.5);
+		z-index: 999;
+		position: relative;
+		-moz-transform:scale(2.0);
+		-webkit-transform:scale(2.0);
+		-o-transform:scale(2.0);
+	}
+	
+	
+	/* Conventional Search Results and Views  ----------------------------------------- */
+	/* Search Nodes */
+	.view-solr-search-results ul li.views-row, 
+	.search-results li.search-result-custom-display, /* Core search */
+	.view-frontpage .views-row, 
+	.view-gallery-search-result .views-row {
+		float: left;
+		margin-right: 12px;
+		width: 120px;
+		height: 18em;
+		text-align: center;
+	}
+	
+	/* Search Node Titles */
+	.search-results li.search-result-custom-display h3, 
+	.view-frontpage .views-row h2.node-title, 
+	.view-gallery-search-result .views-row h2.node-title {
+		/*display: none;*/
+		font-size: 0.9em;
+		font-weight: bold;
+		line-height: 1.3em;
+		margin-bottom: 0.25em;
+		min-height: 3.6em;
+		position: relative;
+	}
+	
+	/* Search node title's inner link */
+	.search-results li.search-result-custom-display h3 a, 
+	.view-frontpage .views-row h2.node-title a, 
+	.view-gallery-search-result .views-row h2.node-title a {
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+    	width: 100%;
+	}
+	
+	/* Search node text lines (location, date, etc.) */
+	.view-solr-search-results ul li.views-row .views-field, 
+	.search-results li.search-result-custom-display .search-content-info, 
+	.view-frontpage .views-row .field .field-items .field-item, 
+	ul.links li.node-readmore, 
+	.view-gallery-search-result .views-row .field .field-items .field-item {
+		font-size: 0.8em;
+		line-height: 1.2em;
+		padding: 0px;
+	}
+		
+	/* Search Node Image Container */
+	.view-solr-search-results ul li.views-row .views-field-field-image, 
+	.view-frontpage .views-row .field-name-field-image .field-items .field-item, 
+	.search-results li.search-result .field-name-field-image .field-items .field-item, 
+	.view-gallery-search-result .views-row .field-name-field-image .field-items .field-item {
+		margin: 0;
+		padding: 0;
+		height: 120px;
+		position: relative;
+	}
+	
+	/* Search Node Image's surrounding link */
+	.view-solr-search-results ul li.views-row .views-field-field-image a, 
+	.view-frontpage .views-row .field-name-field-image .field-items .field-item a, 
+	.search-results li.search-result .field-name-field-image .field-items .field-item a, 
+	.view-gallery-search-result .views-row .field-name-field-image .field-items .field-item a {
+		bottom: 0px;
+		height: 120px;
+		width: 120px;
+		position: absolute;
+	}
+	
+	/* Hide author and date */
+	.search-results li.search-result-custom-display .search-content-info p.search-info {
+		display: none;
+	} 
+	
+
+/* Search Form -------------------------------------------------- */
+	#block-search-api-page-1 { 
+		padding-top: 5px;
+		margin: 0;
+	}
+	
+	#block-search-api-page-1 h2.block-title { display: none; }
+	
+	#block-search-api-page-1 form#search-api-page-search-form-1 .form-item, 
+	#block-search-api-page-1 form#search-api-page-search-form-1 input {
+		float: left;
+	}
+	
+/* Node Display Page ---------------------------------------------*/
+	.field-name-field-caption {
+		font-size: 0.87em;
+		font-style: italic;
+		font-weight: normal;
+	}
+	
+	.field-name-field-description {
+		
+	}
+
+/* Node--image_record Template -----------------------------------*/
+	.node-column {
+		float: left;
+	}
+	
+	.node-header {
+		margin-bottom: 0.75em;
+	}
+	
+	.node-imagecolumn {
+		width: 300px;
+		clear: both;
+	}
+	
+	.node-maincolumn {
+		width: 340px;
+		margin-left: 1.5em;
+	}
+	
+	.field-name-field-date, 
+	.field-name-field-locationtag {
+		font-size: 1.0em;
+		font-weight: normal;
+		margin-bottom: 0em;
+	}
+	
+	.field-name-field-locationtag {
+		/*min-height: 2em;*/
+	}
+	
+	.field-name-field-description {
+		font-size: 1.1em;
+	}
+	
+	.field-type-image img {
+		-moz-box-shadow: 3px 4px 7px rgba(128,128,128,0.5);
+		-webkit-box-shadow: 3px 4px 7px rgba(128,128,128,0.5);
+		box-shadow: 3px 4px 7px rgba(128,128,128,0.5);
+		margin-top: 0.25em;
+	}
+	
+	.node .field-name-field-image {
+		float: left;
+		margin: 0px 1em 0em 0px;
+	}
+	
+
+/* TAXONOMY VOCABULARY: Categories View --------------------------------*/
+	.view {
+	}
+	
+	.view-categories .views-row {
+		/*background-image: url(../images/d7convert/goldblend_corner.png);*/
+		width: 120px;
+		float: left;
+		overflow: hidden; 
+		padding: 0px;
+		margin: 0px 12px 12px 0px;
+	}
+	
+	.view-categories .views-row .views-field-name {
+		min-height: 3.4em;
+		position: relative;
+	}
+	
+	.view-categories .views-row .views-field-name h2 {
+		line-height: 1.3em;
+		font-weight: normal;
+		text-transform: uppercase;
+		text-autospace: 1px;
+		position: absolute;
+		bottom: 0px;
+		font-size: .9em;
+		letter-spacing: .25em;
+	}
+	
+	.view-categories .views-row .views-field-description {
+	}
+
+	/* Prepare to Transition img */
+	.view-categories .views-row .views-field-description img {
+		max-width: 120px;
+		max-height: 120px;
+		position: relative;
+		left: 0px;
+	}
+	
+	
+/* Hide Blocks and Elements ----------------------------------------------*/
+	#search-api-page-search-form, /* Search Block in Content */
+	#block-block-4, /* Export Search Results Block */
+	.search-performance {
+		display: none;
+	}
+	

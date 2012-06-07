@@ -1,0 +1,14 @@
+/*****************************************************
+ * noprint.css
+ * Incorporated from State.gov
+ * Copyright (c) 2011 U.S. Department of State
+ * 2011-07-06
+ *
+ */
+
+/* when not printing, these things should be hidden */
+
+#banner4print, #banner4printie6 {display:none;}
+
+.hidden {display:none};
+

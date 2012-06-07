@@ -1,0 +1,143 @@
+/**
+ * @file
+ * Print styling
+ *
+ * We provide some sane print styling for Drupal using Zen's layout method.
+ */
+
+
+/* underline all links */
+a:link,
+a:visited {
+  text-decoration: underline !important;
+}
+
+/* Don't underline header */
+#site-name a:link,
+#site-name a:visited {
+  text-decoration: none !important;
+}
+
+/* CSS2 selector to add visible href after links */
+#content a:link:after,
+#content a:visited:after {
+  content: " (" attr(href) ") ";
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+/* Un-float the content */
+#content,
+#content .section {
+  float: none;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Turn off any background colors or images */
+body,
+#page-wrapper,
+#page,
+#main-wrapper,
+#main,
+#content,
+#content .section {
+  color: #000;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Hide sidebars and nav elements */
+#skip-to-nav,
+#toolbar,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-footer,
+.breadcrumb,
+div.tabs,
+.action-links,
+.links,
+.book-navigation,
+.forum-topic-navigation,
+.pager,
+.feed-icons {
+  visibility: hidden;
+  display: none;
+}
+
+/* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
+   the content after the first page. */
+#page-wrapper {
+  overflow-y: visible;
+}
+
+
+/*****************************************************
+ * print.css
+ * Print Style from State.gov
+ * Copyright (c) 2011 U.S. Department of State
+ * 2011-07-06
+ *
+ */
+
+#masthead, #tier3-local-nav  {display:none;}
+#banner4print {display:block;margin-bottom:15px;margin-left:18px;}
+
+/* remove the static map banner */
+#masthead-map {display:none;}
+
+/* make the main area wider since the left nav isn't displayed */
+#tier3-local-nav {display:none;}
+#tier3-landing-content {width:610px;margin-left:30px;}
+
+/* hide legacy left nav for bmena, mepi, etc */
+#body-row02-col01 {display:none;}
+#body-row02 {text-align:left;}
+
+/* prevents the bottom line from cutting off in IE */
+body { margin-bottom: 10px; }
+
+/* ensures firefox will print all the pages */
+#tier3-landing-content-wide, #tier3-landing-content {overflow:visible;}
+
+/* right column */
+#sidebar {width:250px;}
+#sidebar-top, #country-profiles,#where-is-the-secretary, #google-map-overlay {display:none;}
+
+#stayconnect {display:none;}
+#from-the-dipnote-blog {display:block;margin-top:0;padding-top:0;}
+
+/* features - only show first set of three */
+.noprint {display:none;}
+/* slim the middle column padding */
+.feature2 {padding:0 0 15px 0;}
+
+/* footer */
+/*
+#footer-links, #sitemap-links {display:none;}
+*/
+
+/* make the footer link columns a little slimmer for print */
+.sitemap-column {width:150px;}
+
+/* things that were hidden on screen, should be shown for printing.  like certain headers
+that are in the background and wouldn't show up when printing..  so let's make them show */
+.hidden {display:block};
+
+/* don't show the real in other news since the hidden one will show */
+h2.in-other-news-headline, h2.features-headline {display:none;}
+
+/*Give tier3 and doc titles a little more space under them so they don't cut off */
+h2.tier3-headline {line-height:32px;}
+
+/* the 3 little boxes - used for top story flipping */
+#top-story-pagination {display:none;}
+
+/* show the subscribe to text */
+p a#subscribe-to-updates span { display:block; color: #185A9C; text-decoration: none;}
+
+/* remove line udner features */
+h2.features-headline, #feature-nav {border-bottom:none;}
+

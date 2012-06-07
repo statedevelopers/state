@@ -1,0 +1,77 @@
+<?php
+/**
+ * @file
+ * Ezy-bake Drupal install profile .install file.
+ */
+
+/**
+ * Implements hook_install(). */
+ function state_install() {
+￼   // Do stuff here.
+ }
+ 
+// Programatically generate theme based on sites configuration path
+// (sites/[path]).
+// @TODO - May need to use request_uri() instead for non-aegir based sites.
+  $name = preg_filter('/(sites\/)(.*?)\..*/', '$2', conf_path()) . '_omega_theme';
+  
+  $subtheme = new stdClass();
+  $subtheme->new = TRUE;
+  $subtheme->name = 'Site theme - Omega';
+  $subtheme->machine_name = $name;
+  $subtheme->path = conf_path() . '/themes/' . $subtheme->machine_name;
+  $subtheme->base = 'omega';
+  $subtheme->default = TRUE;
+  $subtheme->status = TRUE;
+  
+  omega_tools_subtheme_create($subtheme);
+  omega_tools_subtheme_process($subtheme);
+
+
+// Programatically generate theme based on sites configuration path
+// (sites/[path]).
+// @TODO - May need to use request_uri() instead for non-aegir based sites.
+  $name = preg_filter('/(sites\/)(.*?)\..*/', '$2', conf_path()) . '_zen_theme';
+  
+  $form_state = array(
+    'values' => array(
+      'sysname' => $name,
+      'description' => 'Site theme - Zen',
+      'parent' => 'starterkit',
+      'friendly' => 'Site theme - Zen',
+      'layout' => 'fixed',
+      'fresh' => TRUE,
+      'site' => str_replace('sites/', '', conf_path()),
+      'sidebars_on' => FALSE,
+      'sidebar-left' => '200',
+      'sidebar-right' => '200',
+      'page' => '960',
+      'sidebar-pos' => 'normal',
+    ),
+  );
+  
+  drupal_form_submit('zenophile_create', $form_state);
+
+
+/**
+ * Call feature starterkit
+ */
+
+//$machine_name = preg_filter('/(sites\/)(.*?)\..*/', '$2', conf_path());
+//$destination = conf_path() . '/modules/state/' . $machine_name . '_core';
+
+//omega_tools_copy_recursive(drupal_get_path('module', 'state') . '/starterkit', $destination);
+//omega_tools_move($destination . '/starterkit_core.info.txt', $destination . '/starterkit_core.info');
+//omega_tools_rewrite_recursive($destination, 'starterkit', $machine_name, $machine_name);
+
+
+  /**
+    * @file
+    * starterkit_core.context.inc
+    */
+    
+  /**
+   * Implements hook_context_default_contexts().
+   */
+    function starterkit_core_context_default_contexts() {
+    }

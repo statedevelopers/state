@@ -1,0 +1,30 @@
+/*****************************************************
+ * user.css
+ * Copyright (c) 2011 U.S. Department of State
+ * 2012-04-26
+ *
+ */
+
+  .profile .user-picture {
+    float: none;
+    margin: 0;
+  }
+  
+  .profile .user-picture img {  
+		-moz-box-shadow: 3px 4px 7px rgba(128,128,128,0.5);
+		-webkit-box-shadow: 3px 4px 7px rgba(128,128,128,0.5);
+		box-shadow: 3px 4px 7px rgba(128,128,128,0.5);
+		margin-top: 0.25em;
+  }
+
+  
+  /* USER PANELS -------------------------------------- */
+  .user-view-panel h2.pane-title {
+    display: none;
+  }
+  
+  .user-view-panel .profile-center {
+    font-size: 1.1em;
+    line-height: 1.4em;
+    font-weight: bold;
+  }

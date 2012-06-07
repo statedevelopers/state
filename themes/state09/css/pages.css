@@ -1,0 +1,302 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+
+/*
+ * Body
+ */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#page-wrapper {
+}
+
+#page {
+}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+#skip-link a,
+#skip-link a:visited {
+  display: block;
+  width: 100%;
+  padding: 2px 0 3px 0;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+#header {
+}
+
+#header .section {
+}
+
+#logo /* Wrapping link for logo */ {
+  float: left; /* LTR */
+  margin: 0;
+  padding: 0;
+}
+
+#logo img {
+  vertical-align: bottom;
+}
+
+#name-and-slogan /* Wrapper for website name and slogan */ {
+  float: left;
+}
+
+h1#site-name,
+div#site-name /* The name of the website */ {
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+#site-name a:link,
+#site-name a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: underline;
+}
+
+#site-slogan /* The slogan (or tagline) of a website */ {
+}
+
+.region-header /* Wrapper for any blocks placed in the header region */ {
+  clear: both; /* Clear the logo */
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+}
+
+#main {
+	background: transparent url(../images/d7convert/dropshadow_edge_top.png) repeat-x;
+	position: relative;
+}
+
+/*
+ * Content
+ */
+#content {
+  position: relative;
+}
+
+#content .section {
+}
+
+.region-highlighted {
+}
+
+.breadcrumb /* The path to the current page in the form of a list of links */ {
+  padding-bottom: 0; /* Undo system.css */
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+
+h1.title, /* The title of the page */
+h2.subtitle, /* Falls just under the page title */
+h2.node-title, /* Title of a piece of content when it is given in a list of content */
+h2.block-title, /* Block title */
+h2.title, /* Comment section heading */
+h2.comment-form, /* Comment form heading */
+h3.title /* Comment title */ 
+.title {
+  margin: 0;
+}
+
+h2.subtitle {
+  font-size: 1.5em;
+  margin: -0.6em 0 1.6em;
+}
+
+tr.even /* Some tables have rows marked even or odd. */ {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+div.status, table tr.ok {
+	background-color: aliceBlue;
+}
+
+div.status {
+	border-color: #67c;
+}
+
+div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ {
+  margin: 1.5em 0; /* Drupal core uses "6px 0" margin */
+  width: 486px;
+}
+
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.messages ul li {
+	margin-bottom: 0.5em;
+}
+
+div.status /* Normal priority messages */ {
+  width: 486px;
+}
+
+div.warning,
+tr.warning /* Medium priority messages */ {
+  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error /* High priority messages. See also the .error declaration below. */ {
+  width: 486px;
+}
+
+.error /* Errors that are separate from div.messages status messages. */ {
+  /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+
+.warning /* Warnings that are separate from div.messages status messages. */ {
+  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+
+div.tabs /* See also the tabs.css file. */ {
+  width: 548px;
+}
+
+.region-help /* Help text on a page */ {
+}
+
+.more-help-link /* Link to more help */ {
+}
+
+.region-content /* Wrapper for the actual page content */ {
+	position: relative;
+	padding: 6p 0px;
+}
+
+ul.links /* List of links */ {
+}
+
+ul.links.inline {
+  display: block; /* Let the links be inline, but the container be a block. */
+}
+
+ul.links li {
+  padding: 0 1em 0 0; /* LTR */
+  margin: 0;
+}
+
+.item-list .pager /* A list of page numbers when more than 1 page of content is available */ {
+  padding: 0;
+  font-size: 0.8em;
+}
+
+.item-list .pager li /* Each page number in the pager list */ {
+	background-color: transparent;
+	border: 1px solid #205080;
+	color: #205080;
+	margin: 0px 1px;
+	padding: 0px 3px;
+	font-weight: normal;
+}
+
+.item-list li.pager-current {
+	font-weight: bold;
+}
+
+.item-list .pager li:hover, 
+.item-list li.pager-current {
+	color: white;
+	background-color: #205080;
+}
+
+.item-list .pager li a {
+	color: inherit;
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+}
+
+.item-list .pager li a:hover {
+	text-decoration: none;
+}
+
+
+.feed-icon /* The link to the RSS or Atom feed for the current list of content */ {
+  /*text-align: right;
+    margin-top: -21px;
+  */
+}
+a.feed-icon:after {
+  content: ' Subscribe';
+}
+
+
+.more-link /* Aggregator, blog, and forum more link */ {
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+.region-sidebar-first {
+}
+
+.region-sidebar-first .section {
+}
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+.region-sidebar-second {
+  position: absolute;
+  right: 0px;
+  z-index: 50;
+}
+
+.region-sidebar-second .section {
+}
+
+/*
+ * Footer
+ */
+.region-footer {
+}
+
+/*
+ * Page bottom
+ */
+.region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
+	color: #7f7f7f;
+	line-height: 1.5em;
+	margin-bottom: 1em;
+	text-align: center;
+}

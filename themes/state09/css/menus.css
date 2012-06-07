@@ -1,0 +1,75 @@
+/*****************************************************
+ * menus.css
+ * Incorporated from State.gov
+ * Copyright (c) 2011 U.S. Department of State
+ * 2011-07-06
+ *
+ */
+
+/* dropdown menus */
+/* level 01 */
+ul#user-nav li#un-corner a span, ul#global-nav li#gn-corner a span {display:none;}
+ul.user-nav-dd, ul.global-nav-dd {position:absolute;}
+ul.user-nav-dd li, ul.global-nav-dd li {float:left;zoom:1;}
+ul.user-nav-dd li.hover, ul.global-nav-dd li.hover {position:relative;}
+
+/* level 02 */
+ul.user-nav-dd ul, ul.global-nav-dd ul {width:232px;visibility:hidden;position:absolute;top:100%;left:0;/*z-index:20;*/}
+ul.user-nav-dd ul li a, ul.global-nav-dd ul li a {margin:1px 13px;border-right:none;display:inline-block;}
+
+/* level 03 */
+ul.user-nav-dd ul ul, ul.global-nav-dd ul ul {left:100%;top:0;}
+ul.user-nav-dd li:hover > ul, ul.global-nav-dd li:hover > ul {visibility:visible;}
+
+/* user nav dropdown */
+/* user nav dropdown - level 01 */
+ul.user-nav-dd li a {font-size:11px;font-weight:normal;text-decoration:none;display:block;}
+
+/* user nav dropdown - level 02 */
+ul.user-nav-dd ul {padding:28px 0px 28px 0px;background:#af0f23;border:1px solid #666;border-top:none;}
+
+ul.user-nav-dd ul.un-margin-fix01 {margin-left:-17px;}
+
+/*ul.user-nav-dd ul.un-margin-fix02 {margin-left:-17px;}
+ul.user-nav-dd ul.un-margin-fix03 {margin-left:-17px;}*/
+
+ul.user-nav-dd ul li {border-bottom:1px solid #bc929a;float:none;}
+ul.user-nav-dd ul li a {color:#fff;}
+ul.user-nav-dd ul li.last {border-bottom:none;}
+ul.user-nav-dd ul li.hover, ul.user-nav-dd ul li.hover a, ul.user-nav-dd ul li:hover, ul.user-nav-dd ul li a:hover {color:#000;background:#eae6ce;}
+
+/* user nav dropdown - level 03 */
+
+/* global nav dropdown */
+/* global nav dropdown - level01 */
+ul.global-nav-dd li a {font-size:11px;font-weight:normal;text-decoration:none;display:block;}
+
+/* global nav dropdown - level02 */
+ul.global-nav-dd ul {padding:28px 0px 28px 0px;background:#eae6cd url("../images/2010/bkg-global-nav-sub.png") 0px 0px repeat-x;border:1px solid #666;border-top:none;}
+
+ul.global-nav-dd ul.gn-margin-fix01 {margin-left:-18px;}
+
+/*ul.global-nav-dd ul.gn-margin-fix02 {margin-left:-38px;}*/
+
+ul.global-nav-dd ul li {border-bottom:1px solid #d8d9da;float:none;}
+ul.global-nav-dd ul li a {color:#185a9c;}
+ul.global-nav-dd ul li.last {border-bottom:none;}
+ul.global-nav-dd ul li.hover, ul.global-nav-dd ul li.hover a, ul.global-nav-dd ul li:hover, ul.global-nav-dd ul li a:hover {color:#fff;background:#609bc8;}
+
+/* global nav dropdown - level03 */
+
+/* Footer Menu */
+	#block-menu-menu-footer-menu ul {
+		text-align: center;
+	}
+	
+	#block-menu-menu-footer-menu ul li {
+		display: inline-block;
+		padding: 0 6px;
+		margin: 0;
+		border-left: 1px #CCC solid;
+	}
+	
+	#block-menu-menu-footer-menu ul li.first {
+		border-left: none;
+	}

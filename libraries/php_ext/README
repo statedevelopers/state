@@ -1,0 +1,60 @@
+XMP extension for PHP
+---------------------
+
+By Alexander Block
+
+These are the sources of an XMP (Extensible Metadata Platform by Adobe) extension
+for PHP based on the exempi library which is therefore based on the Adobe XMP
+Toolkit (http://www.adobe.com/devnet/xmp/).
+
+REQUIREMENTS
+------------
+
+- Sources of the exempi library, see http://libopenraw.freedesktop.org/wiki/Exempi
+- Sources of the expat XML parser (required by exempi), see http://expat.sourceforge.net
+- PHP 5.2.x (other PHP versions may work but they have not been tested yet), see http://www.php.net
+
+
+INSTALLATION
+------------
+
+To compile the XMP PHP extension follow the described steps.
+
+1. Unpack and install PHP 5.2.x to get the files "phpize" and "php-config"
+
+2. Unpack and install the expat XML parser to get the shared library "libexpat.so"
+
+3. Unpack and install exempi using the "configure" command (use the "--prefix"
+   parameter to change the target base directory) followed by "make" and "make install"
+
+4. Unpack the XMP PHP extension file and change into the directory "php_ext"
+
+5. Run "<PHPDIR>/bin/phpize"
+   Exchange "<PHPDIR>" with the name of the directory where PHP has been installed
+
+6. Run "./configure --prefix=<PREFIX> --with-exempi=<EXEMPIDIR>
+                    --with-php-config=<PHPDIR>/bin/php-config --with-expat --enable-xmp"
+   Exchange "<PREFIX>" with the name of the target directory where XMP PHP should be installed
+   Exchange "<EXEMPIDIR>" with the name of the directory where the exempi files have been
+            installed (see the "--prefix" parameter in 3.)
+   Exchange "<PHPDIR>" with the name of the directory where PHP has been installed
+
+7. Run "make" to compile the extension
+
+8. Run "make install" to copy the file xmp.so to the extension directory of your PHP
+   installation. If the file is for any reason copied to the wrong directory, have a
+   look on the value of the "extension_dir" setting in your php.ini file or use the
+   "phpinfo()" function in a PHP script to get this setting and copy the file manually
+   to the directory that is assigned as a value to this setting.
+
+9. Activate the extension by adding the following line to your php.ini file
+
+   extension=xmp.so
+
+   Some distributions also use separate ini files for each extension e.g. in a directory
+   "/etc/php/ext-active". In this case it is also possible to create a file xmp.ini in
+   this directory and add the metioned line to this file.
+
+10. Execute "php -i" on the command line or "phpinfo();" in a PHP script and search for
+    an output telling you "XMP enabled". When using a webserver remember to restart the
+    webserver first.

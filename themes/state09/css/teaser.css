@@ -1,0 +1,319 @@
+/*****************************************************
+ * teaser.css
+ * Created for State.gov photo gallery
+ * Copyright (c) 2011 U.S. Department of State
+ * 2011-10-05
+ *
+ */
+
+
+/* Search Result Views & Layouts ----------------------------------------- */
+	/* PRIMARY Search Result, customized in node template ---------------- */
+	/* Search Nodes & Teaser Nodes */
+	.image-view, 
+	.search-results .node-image-record, 
+	.teaser-region .views-row,
+	.page-taxonomy-term .block-system .node-image-record {
+		float: left;
+		margin: 3px 6px 9px 0px;
+		width: 138px;
+		/*height: 18em;*/
+		text-align: center;
+		overflow: visible;
+	}
+	
+  .image-teaser {
+    text-align: center;
+		position: relative;
+  }
+  
+	/* General container of all elements before image */
+	.image-teaser .node-header,  
+	.teaser-region .node-header,
+	.page-taxonomy-term .block-system .node-header {
+		margin: 0px;
+		overflow: hidden;
+		/*height: 7em;*/
+		width: 120px;
+		padding: 0px 9px;
+	}
+
+	/* Search Node Titles */
+	.image-teaser h3, 
+	.teaser-region .node-image-record h3, 
+	.page-taxonomy-term .block-system .node-image-record h3.node-title {
+		font-size: 0.9em;
+		font-weight: bold;
+		line-height: 1.3em;
+		/*margin-bottom: 0.25em;*/
+		
+		/* Clip long titles to a single line. */
+		max-height: 1.3em; 
+		overflow: hidden; 
+	}
+	
+	/* Search node title's inner link */
+	.image-teaser .node-header h3 a, 
+	.teaser-region .node-image-record h3 a, 
+	.page-taxonomy-term .block-system .node-image-record h3.node-title a {
+	}
+	
+	/* Teaser fields */
+	.image-teaser .node-header .field {
+    margin-bottom: 0;
+	}
+	
+	/* Search node text lines (location, date, etc.) */
+  .image-teaser .node-header .field .field-items .field-item, 
+	.teaser-region .node-image-record .field-name-field-country .field-items .field-item, 
+	.page-taxonomy-term .block-system .node-image-record .field-name-field-country .field-items .field-item,
+	.teaser-region .node-image-record .field-name-field-locationtag .field-items .field-item, 
+	.page-taxonomy-term .block-system .node-image-record .field-name-field-locationtag .field-items .field-item,
+	.view .node-image-record .field-name-field-date .field-items .field-item, 
+	.page-taxonomy-term .block-system .node-image-record .field-name-field-date .field-items .field-item {
+		/*font-size: 0.8em;*/
+		line-height: 1.2em;
+		padding: 0px;
+		max-height: 1.2em;
+	}
+	
+  .image-teaser .node-header .field-name-field-rating .field-items .field-item {
+    max-height: inherit;
+  }
+		
+	/* Search Node Image, outermost div's */
+	.image-teaser .node-image-wrapper, 
+	.teaser-region .node-image-wrapper, 
+	.page-taxonomy-term .block-system .node-image-wrapper {
+		margin-bottom: 0px;
+		position: relative;
+		height: 134px; /* 120px img + 6px frame + 1px border */
+	}
+	
+	.image-teaser .node-image, 
+	.teaser-region .node-image, 
+	.page-taxonomy-term .block-system .node-image {
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+	}
+	
+	/* Search Node Image Container */
+  .image-teaser .field-name-field-image .field-items .field-item, 
+	.teaser-region .node-image-record .field-name-field-image .field-items .field-item, 
+	.page-taxonomy-term .block-system .node-image-record .field-name-field-image .field-items .field-item {
+		margin: 0;
+		padding: 0;
+		/*
+		height: 120px;
+		position: relative;
+		*/
+		bottom: 0px;
+		/*height: 120px;*/
+		width: 132px;
+		position: absolute;
+	}
+	
+	/* Search Node Image's surrounding link */
+	.image-teaser .field-name-field-image .field-items .field-item a,
+	.teaser-region .node-image-record .field-name-field-image .field-items .field-item a, 
+	.page-taxonomy-term .block-system .node-image-record .field-name-field-image .field-items .field-item a {
+	}
+	
+	/* Prepare to Transition img */
+	.image-teaser .field-type-image img,
+	.teaser-region .field-type-image img, 
+	.page-taxonomy-term .block-system .field-type-image img {
+		max-width: 120px;
+		max-height: 120px;
+		position: relative;
+		left: 0px;
+		transition:transform 0.2s ease-in;
+		-webkit-transition:-webkit-transform 0.2s ease-in; 
+		-moz-transition:-moz-transform 0.2s ease-in; 
+		-o-transition:-o-transform 0.2s ease-in; 
+		
+		/* Framing */
+		background: #fff url(../images/d7convert/bkg-gold-white-blend.png) repeat-x;
+		border-radius: 3px;
+		border: 1px #D9D6BF solid;
+		padding: 6px;
+	}
+	
+	/* Transition img */
+/*
+	.image-teaser .field-type-image img:hover,
+	.search-results .field-type-image img:hover, 
+	.teaser-region .field-type-image img:hover, 
+	.page-taxonomy-term .block-system .field-type-image img:hover {
+		box-shadow: 3px 4px 7px rgba(128,128,128,0.5);
+		z-index: 999;
+		position: relative;
+		-moz-transform:scale(2.0);
+		-webkit-transform:scale(2.0);
+		-o-transform:scale(2.0);
+	}
+*/
+	
+	/* Exceptions for Vertical 1-column blocks */
+	.view-display-id-block .views-row, 
+	.view-display-id-block .node-header
+	{
+    height: auto;
+    margin-right: 0px;
+    margin-bottom: 4px;
+    float: none;
+    clear: both;
+    overflow: visible;
+	}
+	
+	  
+/* OG Group Members */
+  .view-og-members .views-row {
+    font-size: 0.8em;
+    height: auto;
+    text-align: left;
+    width: auto;
+  }
+	
+	.view-og-members .panel-2col .panel-col-first {
+    width: 38px;
+	}
+	
+	.view-og-members .panel-2col .panel-col-last {
+	 width: 127px;
+	}
+	
+	.view-og-members .panel-2col .panel-col-last .inside {
+    margin: 0px;
+	}
+
+/* Collection Large [Faux-]Teasers */
+  .collection-large-teaser {
+    overflow: hidden;
+    width: 120px;
+    margin: 0 6px 9px 0;
+    float: left;
+  }
+  
+  .homepage-center-content .panel-pane {
+    clear: both;
+  }
+  
+  .collection-large-teaser h3 {
+    text-align: center;
+    overflow: hidden;
+    width: 120px;
+    font-size: 0.9em;
+    margin: 0;
+    height: 1.5em;
+  }
+  
+  .collection-large-teaser .field-content,
+  .collection-large-teaser .field-content a {
+    overflow: hidden;
+    display: block;
+  }
+
+
+/* SIDEBAR EXCEPTIONS ************************************/
+
+  .sidebar .image-teaser .node-image-wrapper, 
+  .sidebar .image-teaser .node-image-wrapper {
+    height: auto;
+  }
+  
+  .sidebar .image-teaser .node-image,
+  .sidebar .image-teaser .field-name-field-image .field-items .field-item {
+    position: relative;
+  }
+  
+/* MANAGER AREA ***************************************/
+	.manager-area .views-row {
+		float: left;
+		margin: 3px 6px 9px 0px;
+		text-align: center;
+	}
+	
+/* STREAMS ********************************************/
+  .stream .views-field,
+  .stream .views-field span,
+  .stream .views-field span a {
+    font-size: 8px; /* Match to photo icon in px. */
+    width: 60px;
+    overflow: hidden;
+    height: 12px;
+    line-height: 12px;
+  }
+  
+  .stream .views-field span {
+  	display: block;
+  }
+  
+  .stream .views-field-field-image {
+    height:auto;
+  }
+  
+  .stream .views-row {
+    display: inline-block;
+    margin: 0 4px 4px 0;
+  }
+  
+  .stream .views-row-even {
+    /*margin-left: 9px;*/
+  }
+
+/* COLLECTIONS / SETS *******************************/
+  #block-views-collections-block .views-row {
+    position: relative;
+  }
+  
+  #block-views-collections-block .views-row .views-field {
+    font-size: 0.8em;
+    line-height: 1.2em;
+    height: 32px;
+    overflow: hidden;
+  }
+  
+  #block-views-collections-block .views-row .views-field-field-icon {
+    float: left;
+    margin-right: 4px;
+  }
+  
+  #block-views-collections-block .views-row .views-field-title span {
+    vertical-align: middle;
+  }
+  
+  
+/* COLLECTIONS Owner Panel */
+  .teaser-region .deletable {
+    width: 90px;
+  }
+  
+
+/* Profile Teaser, Collection Teaser ***************************************/
+  .teaser .image-column {
+    float: left;
+    width: 32px;
+    padding: 0 0.5em 0 0;
+  }
+  
+  .teaser .text-column {
+    width: 168px; /* max width of the column */
+  }
+  
+  div.teaser {
+    font-size: 0.9em;
+    overflow: hidden;
+    height: 35px;
+    margin-bottom: 3px;
+  }
+  
+  .teaser h3 {
+  }
+  
+  .teaser .field .field-item {
+    margin: 0;
+    line-height: 1.2em;
+  }
+  

@@ -1,0 +1,10 @@
+#! /bin/sh
+#
+# Created by configure
+
+'./configure' \
+'--with-exempi=exempidir' \
+'--with-expat' \
+'--enable-xmp' \
+'--with-php-config=php-config' \
+"$@"

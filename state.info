@@ -1,0 +1,24 @@
+name = State
+description = Install profile for U.S. Department of State, Bureau of Public Affairs
+core = 7.x
+
+
+; Core dependencies
+dependencies[] = contextual
+dependencies[] = field_ui
+dependencies[] = menu
+dependencies[] = overlay
+dependencies[] = path
+
+
+; Contrib dependecies
+dependencies[] = features
+
+
+; Features
+;dependencies[] = ezybake_core
+
+
+;Temporary dependencies
+dependencies[] = omega_tools
+dependencies[] = zenophile
