@@ -39,7 +39,6 @@ dependencies[] = name
 dependencies[] = nodequeue
 dependencies[] = og
 dependencies[] = panels
-dependencies[] = panels_extras
 dependencies[] = pathauto
 dependencies[] = plupload
 dependencies[] = popup
@@ -95,4 +94,3 @@ dependencies[] = taxonomy_dupecheck
 
 ;Temporary dependencies
 dependencies[] = omega_tools
-dependencies[] = zenophile
