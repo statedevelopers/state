@@ -11,8 +11,82 @@ dependencies[] = overlay
 dependencies[] = path
 
 
-; Contrib dependecies
+; Contrib Dependencies
+dependencies[] = advanced_help
+dependencies[] = breadcrumb
+dependencies[] = brightcove
+dependencies[] = captcha
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = custom_breadcrumbs
+dependencies[] = date
+dependencies[] = download_file
+dependencies[] = email
+dependencies[] = email_registration
+dependencies[] = entity
+dependencies[] = entityreference
+dependencies[] = facetapi
 dependencies[] = features
+dependencies[] = feeds
+dependencies[] = field_group
+dependencies[] = field_permissions
+dependencies[] = hierarchical_select
+dependencies[] = imagemagick
+dependencies[] = libraries
+dependencies[] = lightbox2
+dependencies[] = media
+dependencies[] = name
+dependencies[] = nodequeue
+dependencies[] = og
+dependencies[] = panels
+dependencies[] = panels_extras
+dependencies[] = pathauto
+dependencies[] = plupload
+dependencies[] = popup
+dependencies[] = profile2
+dependencies[] = purl
+dependencies[] = rate
+dependencies[] = references
+dependencies[] = relation
+dependencies[] = relation_select
+dependencies[] = rules
+dependencies[] = search_api
+dependencies[] = search_api_db
+dependencies[] = search_api_page
+dependencies[] = search_api_solr
+dependencies[] = search_api_sorts
+dependencies[] = search_api_spellcheck
+dependencies[] = search_restrict
+dependencies[] = search404
+dependencies[] = simpletest
+dependencies[] = spaces
+dependencies[] = strongarm
+dependencies[] = subform
+dependencies[] = synonyms
+dependencies[] = taxonomy_single_tag
+dependencies[] = term_merge
+dependencies[] = token
+dependencies[] = useremaildomain
+dependencies[] = video_embed_field
+dependencies[] = views
+dependencies[] = views_slideshow
+dependencies[] = votingapi
+dependencies[] = webform
+dependencies[] = wysiwyg
+dependencies[] = xmlsitemap
+
+
+; Custom Dependencies
+dependencies[] = entitypopup
+dependencies[] = customstate11
+dependencies[] = relation_dragndrop
+
+
+; Tempoarary Dependencies
+dependencies[] = coder
+dependencies[] = devel
+dependencies[] = taxonomy_csv
+dependencies[] = taxonomy_dupecheck
 
 
 ; Features
