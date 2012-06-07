@@ -50,15 +50,3 @@ projects[email_registration][version] = ''
 
 projects[entity][subdir] = "contributed"
 projects[entity][version] = ''
-
-projects[entitypopup][subdir] = "contributed"
-projects[entitypopup][version] = ''
-
-projects[entityreference][subdir] = "contributed"
-projects[entityreference][version] = ''
-
-projects[facetapi][subdir] = "contributed"
-projects[facetapi][version] = ''
-
-projects[features][subdir] = "contributed"
-projects[features][version] = ''
