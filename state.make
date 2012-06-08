@@ -4,7 +4,7 @@ core = 7.x
 api = 2
 
 
-;Modules - Contrib
+; Modules - Contrib
 
 projects[advanced_help][subdir] = "contributed"
 projects[advanced_help][version] = 1.0
@@ -235,7 +235,7 @@ projects[xmlsitemap][subdir] = "contributed"
 projects[xmlsitemap][version] = ''
 
 
-;Modules - Temporary
+; Modules - Temporary
 
 projects[coder][subdir] = 'temporary'
 projects[coder][version] = ''
@@ -265,7 +265,35 @@ projects[zenophile][subdir] = "contributed"
 projects[zenophile][version] = ''
 
 
-;Libraries
+; Modules - Custom
+
+projects[customstate11][subdir] = 'temporary'
+projects[customstate11][type] = module
+projects[customstate11][download][type] = git
+projects[customstate11][download][url] = git://github.com/tomogden/customstate11.git
+
+projects[dosfixer][subdir] = 'temporary'
+projects[dosfixer][type] = module
+projects[dosfixer][download][type] = git
+projects[dosfixer][download][url] = git://github.com/tomogden/dosfixer.git
+
+projects[entitypopup][subdir] = 'temporary'
+projects[entitypopup][type] = module
+projects[entitypopup][download][type] = git
+projects[entitypopup][download][url] = git://github.com/tomogden/entitypopup.git
+
+projects[relation_dragndrop][subdir] = 'temporary'
+projects[relation_dragndrop][type] = module
+projects[relation_dragndrop][download][type] = git
+projects[relation_dragndrop][download][url] = git://github.com/tomogden/relation_dragndrop.git
+
+projects[termconsolidator][subdir] = 'temporary'
+projects[termconsolidator][type] = module
+projects[termconsolidator][download][type] = git
+projects[termconsolidator][download][url] = git://github.com/tomogden/termconsolidator.git
+
+
+; Libraries
 
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.2/ ckeditor_3.6.2.zip"
@@ -278,7 +306,7 @@ libraries[tinymce][download][url] = "http://github.com/downloads/tinymce/tinymce
 
 
 
-;Themes
+; Themes
 
 projects[omega][type] = "theme"
 projects[omega][version] = "3.0"
