@@ -4,11 +4,28 @@ core = 7.x
 
 
 ; Core dependencies
+dependencies[] = block
+dependencies[] = color
+dependencies[] = comment
 dependencies[] = contextual
+dependencies[] = dashboard
 dependencies[] = field_ui
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
 dependencies[] = menu
-dependencies[] = overlay
+dependencies[] = number
+dependencies[] = options
 dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = toolbar
+dependencies[] = overlay
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
 
 
 ; Contrib Dependencies
